@@ -1,0 +1,34 @@
+
+	[
+		{
+			"command": "ps aux | grep [a]pache2",
+			"expectValue": true,
+			"description": "Ensure Apache2 is running."
+		},
+		{
+			"command": "ps aux | grep [m]ysqld",
+			"expectValue": true,
+			"description": "Ensure mysqld is running."
+
+		},
+		{
+			"command": "ps aux | grep [f]irefox",
+			"expectValue": true,
+			"description": "Ensure firefox is running."
+
+		},
+		{
+			"command": "netstat -tulpn | grep \":80 \"",
+			"expectValue":true,
+			"description": "Ensure port 80 is listening."
+
+		},
+		{
+			"command": "netstat -tulpn | grep \":3306 \"",
+			"expectValue":true,
+			"description": "Ensure port 3306 is listening."
+
+		}
+
+	]
+
