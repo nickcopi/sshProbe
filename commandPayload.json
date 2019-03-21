@@ -28,6 +28,12 @@
 			"expectValue":true,
 			"description": "Ensure port 3306 is listening."
 
+		},
+		{
+			"command": "whoami",
+			"expect" :"nick",
+			"description": "Ensure script is running as nick."
+
 		}
 
 	]

@@ -15,6 +15,9 @@ ssh.connect({
 			if(command.expectValue){
 				if(res.stdout === '') passed = false;
 			}
+			if(command.expect){
+				if(res.stdout !== command.expect) passed = false;
+			}
 
 			if(passed){
 				console.log(`✔️ Test ${command.description} Passed!`);
