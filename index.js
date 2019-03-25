@@ -4,6 +4,8 @@ const fs = require('fs');
 const node_ssh = require('node-ssh');
 ssh = new node_ssh();
 
+
+let results = [];
 ssh.connect({
 	host:config.host,
 	username:config.username,
@@ -20,14 +22,30 @@ ssh.connect({
 			}
 
 			if(passed){
-				console.log(`✔️ Test ${command.description} Passed!`);
+				passTest(command.description);
 			} else {
-				console.log(`✖️ Test ${command.description} Failed!`);
-				
+				failTest(command.description);
 			}
+			fs.writeFileSync('output.json',JSON.stringify(results,null,2));
 		});
 
 	});
 }).catch((e)=>{
 	console.log(e);
 });
+
+passTest = (desc)=>{
+	console.log(`✔️ Test ${desc} Passed!`);
+	results.push({
+		passed: true,
+		description: desc,
+	});
+
+}
+failTest = (desc)=>{
+	console.log(`✖️ Test ${desc} Failed!`);
+	results.push({
+		passed: false,
+		description: desc,
+	});
+}
