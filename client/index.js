@@ -16,11 +16,12 @@
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-//import App from './components/App';
+import App from './components/App/App';
 
 
 
 ReactDOM.render((
-	<h1>lol</h1>
+	<div>
+		<App/>
+	</div>
 ), document.getElementById('react-root'));

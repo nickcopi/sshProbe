@@ -1,0 +1,39 @@
+
+body {
+	text-align: center;
+	margin: auto;
+	font-family:Arial;
+	color:#555577;
+	/*background-color:#CCFFFF;*/
+}
+
+.menuItem{
+	color:white;
+	background-color:#555577;
+	text-decoration: none;
+	padding:10px;
+}
+.menuItem:hover{
+	background-color:#666677;
+	cursor:pointer;
+
+}
+.menuBar{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #555577;
+}
+.loan{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #666677;
+	color:white;
+}
+.loan:hover{
+	background-color:#555577;
+}
+.lockout{
+	user-select:none;
+	color:#7777FF;
+	cursor:pointer;
+}
