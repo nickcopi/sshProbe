@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ComputerView from './ComputerView';
+import HostList from './HostList';
 
 export default class App extends Component {
 
@@ -10,7 +10,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div>
-				<ComputerView/>
+				<HostList/>
 			</div>
 		);
 	}
