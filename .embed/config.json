@@ -1,0 +1,6 @@
+{
+	"name":"SSH Prober",
+	"tags":["Tools","Cyber"],
+	"description":"Actively probe machines over SSH to see if configured conditions are met.",
+	"date":"March 2019"
+}
